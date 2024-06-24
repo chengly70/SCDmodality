@@ -2,7 +2,7 @@ Sub-directory to get OB PSTH shown in Figure 1 Aii (top row)
 
 plot_OB_psth.m -- script to plot PSTH segmented by modality (in paper), also within a modality segmented by drug preparation (not in paper but extensively in Craft et al. '23 JNeurophys)
 
-getShow_DecodeAcc_OB.m -- load single neuron decoding accuracy results saved in mat file IndPCdecode_varyWin_EB_0sSpon.mat (created by running indDecode_PC.m). Shows results in Fig 1C for OB.
+getShow_DecodeAcc_OB.m -- load single neuron decoding accuracy results saved in mat file IndOBdecode_varyWin_EB_0sSpon.mat (created by running indDecode_OB.m). Shows results in Fig 1C for OB.
 
 IndOBdecode_varyWin_EB_0sSpon.mat -- contains all single neuron decoding accuracy when using best possible threshold. Created by script: indDecode_OB.m
 
