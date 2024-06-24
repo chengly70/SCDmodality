@@ -4,7 +4,7 @@ By: Delaney Selb, Andrea Barreiro, Shree Hari Gautam, Woodrow Shew, Cheng Ly
 DOI: xx
 
 
-plot_aPC_psth.m -- script to plot pop- and trial-avg PSTH segmented by modality within a drug prep (in paper), but also segmented by drug prep within a modality (not in paper)
+plot_aPC_psth.m -- script to plot pop- and trial-avg PSTH segmented by modality within a drug prep (in paper, Fig 1 Aii, bottom row), but also segmented by drug prep within a modality (not in paper)
 
 Processed mat files: Rat[j]_ indPC_[NoDrug/Bic/Mus].mat where j indicates rat index (arbitrary) and [NoDrug/Bic/Mus] indicates the drug preparation. 
 Each mat file has 4 varibles: setParam (struct), setParam.Twin=0.1 (100ms time windows), setParam.SponSampLength=3 (3sec of spont. befored evoked), setParam.Toverlap=0 (no overlapping windows). 
