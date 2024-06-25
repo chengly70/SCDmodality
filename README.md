@@ -13,6 +13,10 @@ This function loads 2 mat files: All_Recs.mat, DS_stats.mat, and relies on helpe
 
 For decoding results on unique pairs (LDA, optimal linear), the main function is getCalc_AllPairs_decodeAppend.m that must be run AFTER getCalc_AllPairs_decode.m (or have viable file Reslt_Pairs_All.mat), this appends the cell structures: Dop_u, Dlda_u to Reslt_Pairs_All.mat. 
 
+plots_cfLDcca.m -- pair-by-pair comparison of LDA with SCD (Fig 2B), also shows stat. signif. SCD better than LDA (not reported in paper because so obvious)
+
+plots_4decodes.m -- shows all decoding accuracy distributions for pairs (and 2x2) using LDA, SCD, and Optimal Linear.  Also shows statistical test results (p-values, effect sizes) highlighted in Results section.
+
 M-files that create components used in main scripts/functions to calculate and show results in Figures:
 create_AllRecs.m -- scripts that creates file All_Recs.mat, aggregates data across rat recordings (loading Rat[j]_ indPC_[NoDrug/Bic/Mus].mat files, see below). 
 All_Recs.mat -- has cell variables of summed spike counts in 1s odor evoked period, named [Ob/Pc]_ [or/rt]_[ND/Bic/Mus] that indicate region (Ob or aPC), modality (ortho or retro), and drug preparation (ND,Bic,Mus). Each cell array has size (number recordings)x 1, and each element of the cell array is a matrix of size 10x(number of neurons), where 10 is the number of trials.
