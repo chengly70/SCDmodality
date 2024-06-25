@@ -7,6 +7,12 @@ plot_aPC_psth.m -- script to plot pop- and trial-avg PSTH segmented by modality 
 
 getShow_DecodeAcc_PC.m -- load single neuron decoding accuracy results saved in mat file IndPCdecode_varyWin_EB_0sSpon.mat (created by running indDecode_PC.m). Shows results in Fig 1C for aPC.
 
+For all 2x2 (pairs) decoding results, the main funciton is: getCalc_AllPairs_decode.m. This function calculates the LDA, SCD, and Optim linear decoding on all pairs and saves relevant statistics. 
+This file takes A LONG time to run since it loops through all possible pairs, so edit the for-loops accordingly for shorter runs (see comment in file). Saves results in Reslt_Pairs_All.mat. 
+This function loads 2 mat files: All_Recs.mat, DS_stats.mat, and relies on helper functions: fitcdiscr (MATLAB), kfoldPredict (MATLAB), canoncorr (MATLAB), opt1DDecode.m (finds optimal threshold after data is projected onto hyperplane), bruteDecode.m for optim linear by exhaustively surveying all hyperplans (from our PNAS Nexus paper).
+
+For decoding results on unique pairs (LDA, optimal linear), the main function is getCalc_AllPairs_decodeAppend.m that must be run AFTER getCalc_AllPairs_decode.m (or have viable file Reslt_Pairs_All.mat), this appends the cell structures: Dop_u, Dlda_u to Reslt_Pairs_All.mat. 
+
 M-files that create components used in main scripts/functions to calculate and show results in Figures:
 create_AllRecs.m -- scripts that creates file All_Recs.mat, aggregates data across rat recordings (loading Rat[j]_ indPC_[NoDrug/Bic/Mus].mat files, see below). 
 All_Recs.mat -- has cell variables of summed spike counts in 1s odor evoked period, named [Ob/Pc]_ [or/rt]_[ND/Bic/Mus] that indicate region (Ob or aPC), modality (ortho or retro), and drug preparation (ND,Bic,Mus). Each cell array has size (number recordings)x 1, and each element of the cell array is a matrix of size 10x(number of neurons), where 10 is the number of trials.
