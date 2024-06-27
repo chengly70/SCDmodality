@@ -17,6 +17,11 @@ plots_cfLDcca.m -- pair-by-pair comparison of LDA with SCD (Fig 2B), also shows 
 
 plots_4decodes.m -- shows all decoding accuracy distributions for pairs (and 2x2) using LDA, SCD, and Optimal Linear.  Also shows statistical test results (p-values, effect sizes) highlighted in Results section.
 
+For the 3x3 (triplets) decoding, analogous script is: getCalc_Trips_decode.m. Just like for pairs above, this calculates LDA, SCD, and Optim linear decoding on a very large subset of all 3x3 triplets and saves relevant statistics. 
+This files takes A LONG time to run since we consider a large number of 3x3 networks.  Saves results in Reslt_Trips.mat
+
+plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks.
+
 M-files that create components used in main scripts/functions to calculate and show results in Figures:
 create_AllRecs.m -- scripts that creates file All_Recs.mat, aggregates data across rat recordings (loading Rat[j]_ indPC_[NoDrug/Bic/Mus].mat files, see below). 
 All_Recs.mat -- has cell variables of summed spike counts in 1s odor evoked period, named [Ob/Pc]_ [or/rt]_[ND/Bic/Mus] that indicate region (Ob or aPC), modality (ortho or retro), and drug preparation (ND,Bic,Mus). Each cell array has size (number recordings)x 1, and each element of the cell array is a matrix of size 10x(number of neurons), where 10 is the number of trials.
