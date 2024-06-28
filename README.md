@@ -26,6 +26,12 @@ This files takes A LONG time to run since we consider a large number of 3x3 netw
 
 plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A. This also outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
+Spike Stats Comparisons.
+allFStats_cfDrugs_in_aPC.m -- script to show all box plots (Fig B2) comparing drug effects within a modality, testing all 4 stats (mean,var,cov,correl) WITHIN aPC, and corresponding p-values & effect sizes for all tests (shown in command window).
+allFStats_OrtRt_in_aPC.m -- script to show all box plots (Fig B2) comparing modality within a drug prep, testing all 4 stats (mean,var,cov,correl) WITHIN aPC, and corresponding p-values & effect sizes for all tests (shown in command window).
+allCross_cfDrugs.m -- script to show box plots (Fig B2) comparing drug effects within a modality, testing cross-cov and cross-correl (between OB & aPC). 
+allCross_OrtRt.m -- script to show box plots (Fig B2) comparing modality within a drug prep, testing cross-cov and cross-correl (between OB & aPC).
+
 M-files that create components used in main scripts/functions to calculate and show results in Figures:
 create_AllRecs.m -- scripts that creates file All_Recs.mat, aggregates data across rat recordings (loading Rat[j]_ indPC_[NoDrug/Bic/Mus].mat files, see below). 
 All_Recs.mat -- has cell variables of summed spike counts in 1s odor evoked period, named [Ob/Pc]_ [or/rt]_[ND/Bic/Mus] that indicate region (Ob or aPC), modality (ortho or retro), and drug preparation (ND,Bic,Mus). Each cell array has size (number recordings)x 1, and each element of the cell array is a matrix of size 10x(number of neurons), where 10 is the number of trials.
