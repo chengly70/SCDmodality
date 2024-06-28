@@ -15,7 +15,8 @@ For decoding results on unique pairs (LDA, optimal linear), the main function is
 
 plots_cfLDcca.m -- pair-by-pair comparison of LDA with SCD (Fig 2B), also shows stat. signif. SCD better than LDA (not reported in paper because so obvious)
 
-plots_4decodes.m -- shows all decoding accuracy distributions for pairs (and 2x2) using LDA, SCD, and Optimal Linear.  Also shows statistical test results (p-values, effect sizes) highlighted in Results section. Figure 3A.
+plots_4decodes.m -- shows all decoding accuracy distributions for pairs (and 2x2) using LDA, SCD, and Optimal Linear.  Also shows statistical test results (p-values, effect sizes) highlighted in Results section. Figure 3A. 
+This also outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
 For Theory plots (E & rho positive correlated, E & R1 negatively correlated), run the script: displayTheory.m . This will show all pairs 2x2 by default, BUT can change the variable flag_pairs=0 to show triplet results. 
 Figures 3B, 4B. 
@@ -23,7 +24,7 @@ Figures 3B, 4B.
 For the 3x3 (triplets) decoding, analogous script is: getCalc_Trips_decode.m. Just like for pairs above, this calculates LDA, SCD, and Optim linear decoding on a very large subset of all 3x3 triplets and saves relevant statistics. 
 This files takes A LONG time to run since we consider a large number of 3x3 networks.  Saves results in Reslt_Trips.mat
 
-plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A.
+plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A. This also outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
 M-files that create components used in main scripts/functions to calculate and show results in Figures:
 create_AllRecs.m -- scripts that creates file All_Recs.mat, aggregates data across rat recordings (loading Rat[j]_ indPC_[NoDrug/Bic/Mus].mat files, see below). 
