@@ -137,7 +137,7 @@ g_BICmus=[ones(length(Dlda_u{1}(:,1)),1);2*ones(length(Dlda_u{2}(:,1)),1)];
 [pA_BICmus,tblA_BICmus] = anova1([Dlda_u{1}(:,1) ; Dlda_u{2}(:,1)],g_BICmus,'off');
 
 % table to show ND is stat signif better than Bic/Mus
-drgComp={'Bic<ND';'ND<Mus';'Bic<Mus'}; 
+drgComp={'Bic~=ND';'ND~=Mus';'Bic~=Mus'}; 
 Ttest=[pT_NDbic; pT_NDmus; pT_BICmus]; 
 WRankSum=[pW_NDbic; pW_NDmus; pW_BICmus];
 owanova=[pA_NDbic; pA_NDmus; pA_BICmus];
@@ -169,7 +169,6 @@ g_BICmus=[ones(length(Dcc1_m{1}),1);2*ones(length(Dcc1_m{2}),1)];
 [pA_BICmus,tblA_BICmus] = anova1([Dcc1_m{1} ; Dcc1_m{2}],g_BICmus,'off');
 
 % table to show ND is stat signif better than Bic/Mus
-drgComp={'Bic<ND';'ND<Mus';'Bic<Mus'}; 
 Ttest=[pT_NDbic; pT_NDmus; pT_BICmus]; 
 WRankSum=[pW_NDbic; pW_NDmus; pW_BICmus];
 owanova=[pA_NDbic; pA_NDmus; pA_BICmus];
@@ -201,7 +200,6 @@ g_BICmus=[ones(length(Dop_u{1}),1);2*ones(length(Dop_u{2}),1)];
 [pA_BICmus,tblA_BICmus] = anova1([Dop_u{1} ; Dop_u{2}],g_BICmus,'off');
 
 % table to show ND is stat signif better than Bic/Mus
-drgComp={'Bic<ND';'ND<Mus';'Bic<Mus'}; 
 Ttest=[pT_NDbic; pT_NDmus; pT_BICmus]; 
 WRankSum=[pW_NDbic; pW_NDmus; pW_BICmus];
 owanova=[pA_NDbic; pA_NDmus; pA_BICmus];
