@@ -3,6 +3,8 @@ Code for results in "Coding odor modality in piriform cortex efficiently with lo
 By: Delaney Selb, Andrea Barreiro, Shree Hari Gautam, Woodrow Shew, Cheng Ly
 DOI: xx
 
+Many of the mat-files that contain results (Reslt_Pairs_All[j].mat, Reslt_Trips[j].mat, DS_stats[j].mat, All_Recs[j].mat) are too large for GitHub, they are freely available at: https://drive.google.com/drive/folders/15R0oBExjhKgLBkdg0NSSBaXxmg_RlrCw?usp=sharing
+
 plot_aPC_psth.m -- script to plot pop- and trial-avg PSTH segmented by modality within a drug prep (in paper, Fig 1 Aii, bottom row), but also segmented by drug prep within a modality (not in paper)
 
 plot_aPC_pcolor.m -- script to plot trial-avg spike count for a particular rat, showing all simul. recorded neurons. Nonlinear colorbar to see differences.
