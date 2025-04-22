@@ -5,6 +5,8 @@ DOI: xx
 
 plot_aPC_psth.m -- script to plot pop- and trial-avg PSTH segmented by modality within a drug prep (in paper, Fig 1 Aii, bottom row), but also segmented by drug prep within a modality (not in paper)
 
+plot_aPC_pcolor.m -- script to plot trial-avg spike count for a particular rat, showing all simul. recorded neurons. Nonlinear colorbar to see differences.
+
 getShow_DecodeAcc_PC.m -- load single neuron decoding accuracy results saved in mat file IndPCdecode_varyWin_EB_0sSpon.mat (created by running indDecode_PC.m). Shows results in Fig 1C for aPC.
 
 For all 2x2 (pairs) decoding results, the main funciton is: getCalc_AllPairs_decode.m. This function calculates the LDA, SCD, and Optim linear decoding on all pairs and saves relevant statistics. 
