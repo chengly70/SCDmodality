@@ -9,7 +9,9 @@ plot_aPC_pcolor.m -- script to plot trial-avg spike count for a particular rat, 
 
 getShow_DecodeAcc_PC.m -- load single neuron decoding accuracy results saved in mat file IndPCdecode_varyWin_EB_0sSpon.mat (created by running indDecode_PC.m). Shows results in Fig 1C for aPC.
 
-cf_OBaPC.m -- script to show p-values and effect sizes for single neuron decoding: that LDA < SCD < Optim. Results in Appendix C.
+cf_OBaPC.m -- script to show p-values and effect sizes for single neuron decoding: that LDA < SCD < Optim by drug prep. Results in Appendix C.
+
+plot_aPC_sparse.m -- script to show how sparse responses are in a trial (avg) as a percentage of neurons spiking to stim, plotted as a function of time by modality and drug prep -- shown in Appendix B.
 
 For all 2x2 (pairs) decoding results, the main funciton is: getCalc_AllPairs_decode.m. This function calculates the LDA, SCD, and Optim linear decoding on all pairs and saves relevant statistics. 
 This file takes A LONG time to run since it loops through all possible pairs, so edit the for-loops accordingly for shorter runs (see comment in file). Saves results in Reslt_Pairs_All.mat. 
