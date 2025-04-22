@@ -9,6 +9,8 @@ plot_aPC_pcolor.m -- script to plot trial-avg spike count for a particular rat, 
 
 getShow_DecodeAcc_PC.m -- load single neuron decoding accuracy results saved in mat file IndPCdecode_varyWin_EB_0sSpon.mat (created by running indDecode_PC.m). Shows results in Fig 1C for aPC.
 
+cf_OBaPC.m -- script to show p-values and effect sizes for single neuron decoding: that LDA < SCD < Optim. Results in Appendix C.
+
 For all 2x2 (pairs) decoding results, the main funciton is: getCalc_AllPairs_decode.m. This function calculates the LDA, SCD, and Optim linear decoding on all pairs and saves relevant statistics. 
 This file takes A LONG time to run since it loops through all possible pairs, so edit the for-loops accordingly for shorter runs (see comment in file). Saves results in Reslt_Pairs_All.mat. 
 This function loads 2 mat files: All_Recs.mat, DS_stats.mat, and relies on helper functions: fitcdiscr (MATLAB), kfoldPredict (MATLAB), canoncorr (MATLAB), opt1DDecode.m (finds optimal threshold after data is projected onto hyperplane), bruteDecode.m for optim linear by exhaustively surveying all hyperplans (from our PNAS Nexus paper).
@@ -18,7 +20,7 @@ For decoding results on unique pairs (LDA, optimal linear), the main function is
 plots_cfLDcca.m -- pair-by-pair comparison of LDA with SCD (Fig 2B), also shows stat. signif. SCD better than LDA (not reported in paper because so obvious)
 
 plots_4decodes.m -- shows all decoding accuracy distributions for pairs (and 2x2) using LDA, SCD, and Optimal Linear.  Also shows statistical test results (p-values, effect sizes) highlighted in Results section. Figure 3A. 
-This also outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
+End of script now outputs: p-values and effect sizes comparing differences for all 2x2 (between LDA, SCA, Optim), results in Appendix C, ALSO outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
 For Theory plots (E & rho positive correlated, E & R1 negatively correlated), run the script: displayTheory.m . This will show all pairs 2x2 by default, BUT can change the variable flag_pairs=0 to show triplet results. 
 Figures 3B, 4B. 
@@ -26,7 +28,7 @@ Figures 3B, 4B.
 For the 3x3 (triplets) decoding, analogous script is: getCalc_Trips_decode.m. Just like for pairs above, this calculates LDA, SCD, and Optim linear decoding on a very large subset of all 3x3 triplets and saves relevant statistics. 
 This files takes A LONG time to run since we consider a large number of 3x3 networks.  Saves results in Reslt_Trips.mat
 
-plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A. This also outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
+plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A. End of script now outputs: p-values and effect sizes comparing differences for all 2x2 (between LDA, SCA, Optim), results in Appendix C, ALSO outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
 Spike Stats Comparisons.
 allFStats_cfDrugs_in_aPC.m -- script to show all box plots (Fig B2) comparing drug effects within a modality, testing all 4 stats (mean,var,cov,correl) WITHIN aPC, and corresponding p-values & effect sizes for all tests (shown in command window).
