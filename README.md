@@ -34,6 +34,8 @@ This files takes A LONG time to run since we consider a large number of 3x3 netw
 
 plots_4decodes_Trips.m -- analogous to plots_4decodes.m BUT for all 3x3 networks. Figure 4A. End of script now outputs: p-values and effect sizes comparing differences for all 2x2 (between LDA, SCA, Optim), results in Appendix C, ALSO outputs p-values and effect sizes for comparing differences of whole decoding accuracy distributions within an algorithm in the command line.
 
+plotDA_varyTwin.m -- script to generate Fig 6, showing average decoding accuracies from results (assumes Reslt_Pairs_All[j].mat and Reslt_Trips[j].mat are in directory, see: link to Drive above). To look at pairs vs triplets, edit/comment out lines 5 & 6). 
+
 Spike Stats Comparisons.
 allFStats_cfDrugs_in_aPC.m -- script to show all box plots (Fig B2) comparing drug effects within a modality, testing all 4 stats (mean,var,cov,correl) WITHIN aPC, and corresponding p-values & effect sizes for all tests (shown in command window).
 allFStats_OrtRt_in_aPC.m -- script to show all box plots (Fig B2) comparing modality within a drug prep, testing all 4 stats (mean,var,cov,correl) WITHIN aPC, and corresponding p-values & effect sizes for all tests (shown in command window).
